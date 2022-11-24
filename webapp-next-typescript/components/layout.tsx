@@ -1,7 +1,10 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image';
+import NavBar from './navbar';
+import styles from '../styles/Home.module.scss';
 
-const name = 'Made By Ant1s0c1al';
+//const name = 'Made By Ant1s0c1al';
 export const siteTitle = 'Next.js WebApp | TypeScript';
 
 export default function Layout({
@@ -29,11 +32,16 @@ export default function Layout({
         <meta name='og:title' content={siteTitle} />
       </Head>
 
+      {/*
       <header>
         <h1>{name}</h1>
       </header>
+      */}
 
-      <main>{children}</main>
+      <main>
+        <NavBar />
+        {children}
+      </main>
 
       {!home && (
         <div>
@@ -41,7 +49,18 @@ export default function Layout({
         </div>
       )}
 
-      <footer></footer>
+      <footer className={styles.footer}>
+        <a
+          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Powered by{' '}
+          <span className={styles.logo}>
+            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+          </span>
+        </a>
+      </footer>
 
     </>
   );
