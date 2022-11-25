@@ -1,0 +1,58 @@
+@import "~bootstrap/scss/bootstrap";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 
+    -apple-system, 
+    BlinkMacSystemFont, 
+    Segoe UI, 
+    Roboto, 
+    Oxygen,
+    Ubuntu, 
+    Cantarell, 
+    Fira Sans, 
+    Droid Sans, 
+    Helvetica Neue, 
+    sans-serif;
+}
+
+small { font-size: 11px; }
+p { font-size: 13px; }
+ul { font-size: 13px; } 
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
+
+.container_xy {
+  min-height: 100vh;
+  .content_xy {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
