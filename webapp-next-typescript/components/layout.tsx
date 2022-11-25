@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
+//import Script from 'next/script';
 import NavBar from './navbar';
 import styles from '../styles/Home.module.scss';
 
@@ -19,6 +20,7 @@ export default function Layout({
 
       <Head>
         <link rel='icon' href='/favicon.ico' />
+        <meta charSet='utf-8' />
         <meta
           name='description'
           content='OPENSOURCE PROJECT • Next.js Framework'
@@ -43,25 +45,32 @@ export default function Layout({
         {children}
       </main>
 
+      {/*}
       {!home && (
-        <div>
-          <Link href="/">← Back to home</Link>
+        <div className='d-flex justify-content-end m-3'>
+          <Link href='/'>← Back to home</Link>
         </div>
-      )}
+      )} */}
 
       <footer className={styles.footer}>
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
+          target='_blank'
+          rel='noopener noreferrer'
         >
           Powered by{' '}
           <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+            <Image
+              src='/vercel.svg'
+              alt='Vercel Logo'
+              width={72}
+              height={16}
+            />
           </span>
         </a>
       </footer>
 
+      {/* <Script src='../../bootstrap/dist/js/bootstrap.bundle.min.js' /> */}
     </>
   );
 }

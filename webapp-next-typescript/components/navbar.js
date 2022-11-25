@@ -15,7 +15,7 @@ export default function NavBar() {
           <Link
             className='navbar-brand fw-bold d-block-inline py-2'
             href='/'
-          > WebApp <span className='badge text-bg-light'>BETA</span>
+          > OPENSOURCE <span className='badge text-bg-light'>BETA</span>
           </Link>
 
           <button
