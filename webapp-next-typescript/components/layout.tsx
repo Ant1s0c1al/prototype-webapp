@@ -8,10 +8,7 @@ import styles from '../styles/Home.module.scss';
 //const name = 'Made By Ant1s0c1al';
 export const siteTitle = 'Next.js WebApp | TypeScript';
 
-export default function Layout({
-  children,
-  home
-}: {
+export default function Layout({ children, home }: {
   children: React.ReactNode
   home?: boolean
 }) {

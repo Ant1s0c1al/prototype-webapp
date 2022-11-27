@@ -41,6 +41,24 @@ a {
   }
 }
 
+@mixin gradient_bpr {
+  background: rgb(83,109,254);
+  background: -moz-linear-gradient(90deg, rgba(83,109,254,1) 0%, rgba(126,87,194,1) 35%, rgba(233,30,99,1) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(83,109,254,1) 0%, rgba(126,87,194,1) 35%, rgba(233,30,99,1) 100%);
+  background: linear-gradient(90deg, rgba(83,109,254,1) 0%, rgba(126,87,194,1) 35%, rgba(233,30,99,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#536dfe",endColorstr="#e91e63",GradientType=1); 
+}
+
+.navbar-brand {
+  h2 {
+    color: linear-gradient(90deg, rgba(83,109,254,1) 0%, rgba(126,87,194,1) 35%, rgba(233,30,99,1) 100%);
+  }
+}
+
+.color_bpr {
+  color: linear-gradient(90deg, rgba(83,109,254,1) 0%, rgba(126,87,194,1) 35%, rgba(233,30,99,1) 100%);
+}
+
 .container_xy {
   min-height: 100vh;
   .content_xy {
@@ -56,3 +74,5 @@ a {
   padding: 0;
   margin: 0;
 }
+
+
