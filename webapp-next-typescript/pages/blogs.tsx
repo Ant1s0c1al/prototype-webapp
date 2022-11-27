@@ -16,20 +16,30 @@ export default function Blogs({
 }) {
   return (
     <Layout>
+
       <Head>
         <title>{siteTitle}</title>
       </Head>
+
       <section className='container'>
         <div className='mt-4'>
-          <small>OP3NS0URCE PR0J3CT5</small>
-          <h1 className='mb-4'>FEATURED BLOGS</h1>
+
+          <small className='fw-bold'>
+            OP3NS0URCE PR0J3CT5
+          </small>
+
+          <h1 className='mb-4'>
+            FEATURED BLOGS<span>&#x1F4C1;</span>
+          </h1>
 
           <ul className='list'>
             {allPostsData.map(({ id, date, title }) => (
               <li className='pb-3' key={id}>
-                <Link href={`/blogs/${id}`}><h6 className='mb-0'>{title}</h6></Link>
+                <Link href={`/blogs/${id}`}>
+                  <h6 className='mb-0'>{title}</h6>
+                </Link>
                 <small>
-                  <Date dateString={date} />
+                  <span>&#x1F5D3;</span><Date dateString={date} />
                 </small>
               </li>
             ))}
@@ -44,6 +54,7 @@ export default function Blogs({
 
 export const getStaticProps: GetStaticProps = async () => {
   const allPostsData = getSortedPostsData();
+
   return {
     props: {
       allPostsData
